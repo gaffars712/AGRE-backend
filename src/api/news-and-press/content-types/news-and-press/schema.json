@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news_and_presses",
+  "info": {
+    "singularName": "news-and-press",
+    "pluralName": "news-and-presses",
+    "displayName": "NewsAndPress",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": true,
+      "component": "news-and-press-section.hero-section"
+    }
+  }
+}

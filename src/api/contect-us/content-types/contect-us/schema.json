@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contect_uses",
+  "info": {
+    "singularName": "contect-us",
+    "pluralName": "contect-uses",
+    "displayName": "contect-us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "repeatable": true,
+      "component": "conteact-us-section.banner"
+    },
+    "addInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "conteact-us-section.add-info"
+    }
+  }
+}

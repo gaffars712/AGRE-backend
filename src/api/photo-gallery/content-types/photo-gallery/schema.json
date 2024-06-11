@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photo_galleries",
+  "info": {
+    "singularName": "photo-gallery",
+    "pluralName": "photo-galleries",
+    "displayName": "photo-gallery",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "displayName": "hero",
+      "type": "component",
+      "repeatable": true,
+      "component": "photo-gallery-section.hero"
+    },
+    "commercialP": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-sections.image-slider"
+    },
+    "residetialP": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-sections.image-slider"
+    }
+  }
+}

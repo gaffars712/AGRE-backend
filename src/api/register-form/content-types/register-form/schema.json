@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "register_forms",
+  "info": {
+    "singularName": "register-form",
+    "pluralName": "register-forms",
+    "displayName": "register-Form",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "text",
+      "required": true
+    },
+    "email": {
+      "type": "text"
+    },
+    "number": {
+      "type": "biginteger"
+    },
+    "nationality": {
+      "type": "text"
+    },
+    "unitType": {
+      "type": "text"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "formType": {
+      "type": "string"
+    }
+  }
+}

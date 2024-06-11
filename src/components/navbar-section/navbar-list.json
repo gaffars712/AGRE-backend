@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_navbar_section_navbar_lists",
+  "info": {
+    "displayName": "navbarList"
+  },
+  "options": {},
+  "attributes": {
+    "listName": {
+      "type": "string"
+    },
+    "listPath": {
+      "type": "string"
+    }
+  }
+}

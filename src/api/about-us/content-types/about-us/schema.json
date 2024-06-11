@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "about-us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contentSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-section.content-section"
+    }
+  }
+}

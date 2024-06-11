@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homepage",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homepage",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "default": "home"
+    },
+    "contentSection": {
+      "type": "dynamiczone",
+      "components": [
+        "home-sections.hero-section",
+        "home-sections.residential-section",
+        "home-sections.commercial-section",
+        "home-sections.upcoming-section"
+      ]
+    }
+  }
+}

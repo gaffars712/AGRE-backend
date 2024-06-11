@@ -1,0 +1,162 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commercial_projects",
+  "info": {
+    "singularName": "commercial-project",
+    "pluralName": "commercial-projects",
+    "displayName": "CommercialProject",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SliderImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bannerImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "proName": {
+      "type": "string"
+    },
+    "proTitle": {
+      "type": "text"
+    },
+    "proImgs": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "locationTitle": {
+      "type": "text"
+    },
+    "locationDesc": {
+      "type": "text"
+    },
+    "proParking": {
+      "type": "string"
+    },
+    "proSize": {
+      "type": "string"
+    },
+    "proPrice": {
+      "type": "string"
+    },
+    "proUnit": {
+      "type": "string"
+    },
+    "ProAddress": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "proFeature": {
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "options": [
+        "Ample Car Parking Space",
+        "24 x 7 Security & Maintenance Service",
+        "Badminton Court",
+        "Barbeque Area",
+        "Children Play Area",
+        "Coffee Shop",
+        "EV Charging Station",
+        "Free Chiller",
+        "Free Cooking Gas",
+        "Free Dewa For Office",
+        "Fully Fitted Kitchen",
+        "Fully Equipped Gymnasium",
+        "Jacuzzi",
+        "Jogging Track",
+        "Library",
+        "Loading Unloading Warehouses",
+        "Sauna Room",
+        "Swimming Pool",
+        "Close Public Transport",
+        "Kitchen Facility Free DEWA for Offices",
+        "Kitchen Facility",
+        "Free DEWA for  Offices"
+      ],
+      "required": true
+    },
+    "locationFeature": {
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "options": [
+        "Dubai Frame",
+        "Zabeel Park",
+        "Dubai Creek",
+        "Wifi Mall",
+        "Dubai Garden Glow",
+        "Dubai World Trade Center (DWTC)",
+        "Al Seef",
+        "Burj AI Arab",
+        "Jumeirah Beach",
+        "The Palm Jumeirah",
+        "Madinat Jumeirah",
+        "Wild Wadi Water Park",
+        "Jumeirah Mosque",
+        "Mercato Shopping Mall",
+        "City Walk",
+        "Box Park",
+        "Dubai Canal",
+        "Deira Gold Souk",
+        "Spice Souk",
+        "Naif Souk",
+        "Abraa",
+        "Al Fahidi Historic",
+        "District (Al Bastakiya)",
+        "Dubai Safari",
+        "Dubai Lagoons",
+        "Dragon Market",
+        "Auto Market",
+        "Ras Al Khor Wildlife Sanctury",
+        "Meydan"
+      ],
+      "required": true
+    },
+    "locationURL": {
+      "type": "text",
+      "required": true,
+      "default": "Search Your project's location on google map and click on share / Embed a map COPY HTML and remove this all and past here."
+    },
+    "proType": {
+      "type": "enumeration",
+      "enum": [
+        "Retail",
+        "Office",
+        "Retail - F&B"
+      ],
+      "required": true
+    },
+    "proDesc": {
+      "type": "richtext"
+    }
+  }
+}

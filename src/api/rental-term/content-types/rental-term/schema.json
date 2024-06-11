@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rental_terms",
+  "info": {
+    "singularName": "rental-term",
+    "pluralName": "rental-terms",
+    "displayName": "rental-term"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Desc": {
+      "type": "richtext"
+    }
+  }
+}
