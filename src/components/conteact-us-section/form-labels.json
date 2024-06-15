@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_conteact_us_section_form_labels",
+  "info": {
+    "displayName": "formLabels",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "formTitle": {
+      "type": "string"
+    },
+    "nameLabel": {
+      "type": "string"
+    },
+    "numberLabel": {
+      "type": "string"
+    },
+    "emailLabel": {
+      "type": "string"
+    },
+    "interestLabel": {
+      "type": "string"
+    },
+    "formBTN": {
+      "type": "string"
+    },
+    "formTerms": {
+      "type": "text"
+    }
+  }
+}

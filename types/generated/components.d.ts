@@ -7,10 +7,10 @@ export interface AboutSectionContentSection extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.String;
-    firstImg: Attribute.Media;
-    secondImg: Attribute.Media;
-    fullImg: Attribute.Media;
+    title: Attribute.String & Attribute.Required & Attribute.DefaultTo<'.'>;
+    firstImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    secondImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    fullImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     mainTitle: Attribute.String;
     shortDes: Attribute.String;
     Desc: Attribute.RichText;
@@ -25,7 +25,7 @@ export interface BlogSectionPostSection extends Schema.Component {
     description: '';
   };
   attributes: {
-    postImg: Attribute.Media;
+    postImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
     Desc: Attribute.Text;
   };
@@ -39,7 +39,7 @@ export interface BlogSectionRecentBlog extends Schema.Component {
   attributes: {
     title: Attribute.Text;
     Desc: Attribute.Text;
-    img: Attribute.Media;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -60,6 +60,21 @@ export interface ConteactUsSectionAddInfo extends Schema.Component {
   };
 }
 
+export interface ConteactUsSectionAddLabels extends Schema.Component {
+  collectionName: 'components_conteact_us_section_add_labels';
+  info: {
+    displayName: 'addLabels';
+    description: '';
+  };
+  attributes: {
+    emailLabel: Attribute.String;
+    contectLabel: Attribute.String;
+    HoursLabel: Attribute.String;
+    officeLabel: Attribute.String;
+    addBTN: Attribute.String;
+  };
+}
+
 export interface ConteactUsSectionBanner extends Schema.Component {
   collectionName: 'components_conteact_us_section_banners';
   info: {
@@ -68,7 +83,24 @@ export interface ConteactUsSectionBanner extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    img: Attribute.Media;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface ConteactUsSectionFormLabels extends Schema.Component {
+  collectionName: 'components_conteact_us_section_form_labels';
+  info: {
+    displayName: 'formLabels';
+    description: '';
+  };
+  attributes: {
+    formTitle: Attribute.String;
+    nameLabel: Attribute.String;
+    numberLabel: Attribute.String;
+    emailLabel: Attribute.String;
+    interestLabel: Attribute.String;
+    formBTN: Attribute.String;
+    formTerms: Attribute.Text;
   };
 }
 
@@ -84,6 +116,16 @@ export interface FaqSectionFaqs extends Schema.Component {
   };
 }
 
+export interface FooterSectionCopyRight extends Schema.Component {
+  collectionName: 'components_footer_section_copy_rights';
+  info: {
+    displayName: 'copyRight';
+  };
+  attributes: {
+    title: Attribute.String;
+  };
+}
+
 export interface FooterSectionFollowLinks extends Schema.Component {
   collectionName: 'components_footer_section_follow_links';
   info: {
@@ -93,7 +135,17 @@ export interface FooterSectionFollowLinks extends Schema.Component {
   attributes: {
     name: Attribute.String;
     link: Attribute.Text & Attribute.Required;
-    img: Attribute.Media;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface FooterSectionFollowTitle extends Schema.Component {
+  collectionName: 'components_footer_section_follow_titles';
+  info: {
+    displayName: 'followTitle';
+  };
+  attributes: {
+    title: Attribute.String;
   };
 }
 
@@ -128,6 +180,7 @@ export interface HomeSectionsCommercialSection extends Schema.Component {
   attributes: {
     title: Attribute.String;
     desc: Attribute.Text;
+    viewBTN: Attribute.String & Attribute.Required;
   };
 }
 
@@ -139,7 +192,7 @@ export interface HomeSectionsHeroSection extends Schema.Component {
   };
   attributes: {
     heroContent: Attribute.Text;
-    heroImg: Attribute.Media;
+    heroImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -151,7 +204,7 @@ export interface HomeSectionsImageSlider extends Schema.Component {
   };
   attributes: {
     caption: Attribute.String;
-    residentialImg: Attribute.Media;
+    residentialImg: Attribute.Media<'images'>;
     redirectURL: Attribute.String;
   };
 }
@@ -165,6 +218,7 @@ export interface HomeSectionsResidentialSection extends Schema.Component {
   attributes: {
     title: Attribute.String;
     desc: Attribute.Text;
+    viewBTN: Attribute.String & Attribute.Required;
   };
 }
 
@@ -177,6 +231,7 @@ export interface HomeSectionsUpcomingSection extends Schema.Component {
   attributes: {
     title: Attribute.String;
     desc: Attribute.Text;
+    viewBTN: Attribute.String & Attribute.Required;
   };
 }
 
@@ -212,7 +267,7 @@ export interface NewsAndPressSectionNewsContent extends Schema.Component {
   attributes: {
     title: Attribute.String;
     Desc: Attribute.Text;
-    img: Attribute.Media;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -225,7 +280,7 @@ export interface NewsAndPressSectionNews extends Schema.Component {
   attributes: {
     title: Attribute.Text;
     Desc: Attribute.Text;
-    img: Attribute.Media;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     date: Attribute.Date;
   };
 }
@@ -251,7 +306,10 @@ export interface ProjectDetailsSectionContentSection extends Schema.Component {
   attributes: {
     title: Attribute.Text;
     Desc: Attribute.Text;
-    projectImgs: Attribute.Media;
+    projectImgs: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
   };
 }
 
@@ -263,7 +321,7 @@ export interface ProjectDetailsSectionHeroSection extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    bannerimg: Attribute.Media;
+    bannerimg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -274,7 +332,7 @@ export interface ProjectDetailsSectionLocationFeature extends Schema.Component {
     description: '';
   };
   attributes: {
-    feature: Attribute.Media;
+    feature: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     featureName: Attribute.String & Attribute.Required;
   };
 }
@@ -288,7 +346,7 @@ export interface ProjectDetailsSectionLocationSection extends Schema.Component {
   attributes: {
     title: Attribute.String;
     Desc: Attribute.Text;
-    locationImg: Attribute.Media;
+    locationImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -299,7 +357,7 @@ export interface ProjectDetailsSectionPlanSection extends Schema.Component {
     description: '';
   };
   attributes: {
-    img: Attribute.Media;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String & Attribute.Required;
     Desc: Attribute.Text;
   };
@@ -312,7 +370,7 @@ export interface ProjectDetailsSectionProjectFeature extends Schema.Component {
     description: '';
   };
   attributes: {
-    feature: Attribute.Media;
+    feature: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     featureName: Attribute.String & Attribute.Required;
   };
 }
@@ -337,8 +395,8 @@ export interface UpcomingSectionAllUpcoming extends Schema.Component {
   attributes: {
     title: Attribute.String;
     Desc: Attribute.Text;
-    img: Attribute.Media;
-    sliderImg: Attribute.Media;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    sliderImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     proName: Attribute.String;
   };
 }
@@ -384,9 +442,13 @@ declare module '@strapi/types' {
       'blog-section.post-section': BlogSectionPostSection;
       'blog-section.recent-blog': BlogSectionRecentBlog;
       'conteact-us-section.add-info': ConteactUsSectionAddInfo;
+      'conteact-us-section.add-labels': ConteactUsSectionAddLabels;
       'conteact-us-section.banner': ConteactUsSectionBanner;
+      'conteact-us-section.form-labels': ConteactUsSectionFormLabels;
       'faq-section.faqs': FaqSectionFaqs;
+      'footer-section.copy-right': FooterSectionCopyRight;
       'footer-section.follow-links': FooterSectionFollowLinks;
+      'footer-section.follow-title': FooterSectionFollowTitle;
       'footer-section.main-section': FooterSectionMainSection;
       'footer-section.web-section': FooterSectionWebSection;
       'home-sections.commercial-section': HomeSectionsCommercialSection;

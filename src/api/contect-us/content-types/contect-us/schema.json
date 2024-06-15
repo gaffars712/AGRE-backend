@@ -4,22 +4,58 @@
   "info": {
     "singularName": "contect-us",
     "pluralName": "contect-uses",
-    "displayName": "contect-us"
+    "displayName": "contect-us",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "banner": {
       "type": "component",
       "repeatable": true,
-      "component": "conteact-us-section.banner"
+      "component": "conteact-us-section.banner",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "addInfo": {
       "type": "component",
       "repeatable": true,
-      "component": "conteact-us-section.add-info"
+      "component": "conteact-us-section.add-info",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "addLabels": {
+      "displayName": "addLabels",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "conteact-us-section.add-labels"
+    },
+    "formLabels": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "conteact-us-section.form-labels"
     }
   }
 }

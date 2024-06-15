@@ -1,10 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "terms_and_conditions",
+  "collectionName": "posts",
   "info": {
-    "singularName": "terms-and-condition",
-    "pluralName": "terms-and-conditions",
-    "displayName": "Terms & Condition"
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,8 +16,8 @@
     }
   },
   "attributes": {
-    "content": {
-      "type": "richtext",
+    "text": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true

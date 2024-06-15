@@ -10,23 +10,42 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "hero": {
       "displayName": "hero",
       "type": "component",
       "repeatable": true,
-      "component": "photo-gallery-section.hero"
+      "component": "photo-gallery-section.hero",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "commercialP": {
       "type": "component",
       "repeatable": true,
-      "component": "home-sections.image-slider"
+      "component": "home-sections.image-slider",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "residetialP": {
       "type": "component",
       "repeatable": true,
-      "component": "home-sections.image-slider"
+      "component": "home-sections.image-slider",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

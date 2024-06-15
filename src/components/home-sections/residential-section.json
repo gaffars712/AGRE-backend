@@ -11,6 +11,10 @@
     },
     "desc": {
       "type": "text"
+    },
+    "viewBTN": {
+      "type": "string",
+      "required": true
     }
   }
 }

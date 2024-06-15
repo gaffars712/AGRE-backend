@@ -10,18 +10,32 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "hero": {
       "displayName": "hero-section",
       "type": "component",
       "repeatable": true,
-      "component": "video-gallery-section.hero-section"
+      "component": "video-gallery-section.hero-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "links": {
       "type": "component",
       "repeatable": true,
-      "component": "video-gallery-section.video-section"
+      "component": "video-gallery-section.video-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

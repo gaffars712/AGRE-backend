@@ -4,18 +4,32 @@
   "info": {
     "singularName": "blog-section",
     "pluralName": "blog-sections",
-    "displayName": "blogSection"
+    "displayName": "Blog Section"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "title": {
-      "type": "text"
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "Desc": {
-      "type": "text"
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "img": {
       "allowedTypes": [
@@ -25,7 +39,12 @@
         "audios"
       ],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }
