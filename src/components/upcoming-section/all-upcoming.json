@@ -36,6 +36,9 @@
     },
     "proName": {
       "type": "string"
+    },
+    "viewBTN": {
+      "type": "string"
     }
   }
 }

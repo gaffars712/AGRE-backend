@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "navbardata",
+  "collectionName": "properties",
   "info": {
-    "singularName": "navbar",
-    "pluralName": "navbardata",
-    "displayName": "Navbar",
+    "singularName": "propertie",
+    "pluralName": "properties",
+    "displayName": "propertie",
     "description": ""
   },
   "options": {
@@ -16,41 +16,47 @@
     }
   },
   "attributes": {
-    "title": {
-      "type": "string",
+    "mainTitle": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "string"
     },
-    "titleImg": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
+    "titleOne": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "string"
     },
-    "navList": {
-      "type": "component",
-      "repeatable": true,
-      "component": "navbar-section.navbar-list",
+    "titleTwo": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "string"
     },
-    "searchPlaceholder": {
+    "shortDes": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "titleOneTitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "titleTwoTitle": {
       "pluginOptions": {
         "i18n": {
           "localized": true

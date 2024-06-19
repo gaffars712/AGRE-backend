@@ -68,7 +68,12 @@
     "proPlans": {
       "type": "component",
       "repeatable": true,
-      "component": "project-details-section.plan-section"
+      "component": "project-details-section.plan-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "locationTitle": {
       "type": "string",
@@ -152,10 +157,23 @@
         "Sauna Room",
         "Swimming Pool",
         "Close Public Transport",
-        "Kitchen Facility Free DEWA for Offices"
+        "Kitchen Facility Free DEWA for Offices",
+        "Modern And Recently Refurbished Villas",
+        "Luxurious Finishes",
+        "Great Location",
+        "Beautiful Landscape And Garden",
+        "24 x 7 Security & Maintenance Service",
+        "In House Gym With Equipment",
+        "Furnished Kitchen And Outdoor",
+        "Private Swimming Pool"
       ],
       "customField": "plugin::multi-select.multi-select",
-      "required": true
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "locationFeature": {
       "type": "customField",
@@ -197,7 +215,12 @@
         "Restaurants and Cafes"
       ],
       "customField": "plugin::multi-select.multi-select",
-      "required": true
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "locationURL": {
       "type": "text",
@@ -208,7 +231,9 @@
       "type": "enumeration",
       "enum": [
         "Villa",
-        "Apartment"
+        "فيلا",
+        "Apartment",
+        "شقة"
       ],
       "pluginOptions": {
         "i18n": {
@@ -236,6 +261,93 @@
         "false"
       ],
       "required": true
+    },
+    "proFeatureAR": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "options": [
+        "مساحة واسعة لوقوف السيارات",
+        "خدمة الأمن والصيانة 24 × 7",
+        "تنس الريشة",
+        "منطقة الشواء",
+        "منطقة لعب الأطفال",
+        "مقهى",
+        "محطة شحن EV",
+        "مبرد مجاني",
+        "غاز الطبخ مجاني",
+        "ديوا مجانا للمكتب",
+        "مطبخ مجهز بالكامل",
+        "صالة ألعاب رياضية مجهزة بالكامل",
+        "جاكوزي",
+        "الركض المسار",
+        "مكتبة",
+        "تحميل وتفريغ المستودعات",
+        "غرفة ساونا",
+        "حمام السباحة",
+        "إغلاق وسائل النقل العام",
+        "مرافق المطبخ هيئة كهرباء ومياه دبي مجانية للنقل للمكاتب",
+        "فيلات حديثة ومجددة مؤخرًا",
+        "تشطيبات فاخرة",
+        "موقع عظيم",
+        "المناظر الطبيعية الجميلة والحديقة",
+        "خدمة الأمن والصيانة 24 × 7",
+        "صالة ألعاب رياضية داخلية مع المعدات",
+        "مطبخ مفروش وخارجي",
+        "حمام سباحة خاص",
+        "",
+        ""
+      ]
+    },
+    "locationFeatureAR": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "options": [
+        "إطار دبي",
+        "حديقة زعبيل",
+        "خور دبي",
+        "واي فاي مول",
+        "دبي جاردن جلو",
+        "مركز دبي التجاري العالمي (DWTC)",
+        "السيف",
+        "برج العرب",
+        "شاطئ جميرا",
+        "نخلة جميرا",
+        "مدينة جميرا",
+        "حديقة وايلد وادي المائية",
+        "مسجد جميرا",
+        "مركز تسوق ميركاتو",
+        "سيتي ووك",
+        "بوكس بارك",
+        "قناة دبي",
+        "سوق ديرة للذهب",
+        "سوق التوابل",
+        "سوق نايف",
+        "عبرة",
+        "الفهيدي التاريخية",
+        "المنطقة (البستكية)",
+        "دبي سفاري",
+        "بحيرات دبي",
+        "سوق التنين",
+        "سوق السيارات",
+        "محمية رأس الخور للحياة البرية",
+        "ميدانالمواقع الثقافية",
+        "دبي جاردن جلو",
+        "حديقة خور دبي",
+        "دبي أوبرا",
+        "منطقة البستكية للفنون",
+        "مطاعم ومقاهي",
+        ""
+      ]
     }
   }
 }

@@ -1231,7 +1231,16 @@ export interface ApiCommercialProjectCommercialProject
         };
       }> &
       Attribute.DefaultTo<"Search Your project's location on google map and click on share / Embed a map COPY HTML and remove this all and past here.">;
-    proType: Attribute.Enumeration<['Retail', 'Office', 'Retail - F&B']> &
+    proType: Attribute.Enumeration<
+      [
+        'Retail',
+        '\u0628\u064A\u0639 \u0628\u0627\u0644\u062A\u062C\u0632\u0626\u0629',
+        'Office',
+        '\u0645\u0643\u062A\u0628',
+        'Retail - F&B',
+        '\u0627\u0644\u0628\u064A\u0639 \u0628\u0627\u0644\u062A\u062C\u0632\u0626\u0629 - \u0627\u0644\u0645\u0623\u0643\u0648\u0644\u0627\u062A \u0648\u0627\u0644\u0645\u0634\u0631\u0648\u0628\u0627\u062A'
+      ]
+    > &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1513,6 +1522,24 @@ export interface ApiFaqFaq extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    fromPage: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    fromPagePath: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1524,6 +1551,156 @@ export interface ApiFaqFaq extends Schema.CollectionType {
       'api::faq.faq',
       'oneToMany',
       'api::faq.faq'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiFilterFilter extends Schema.CollectionType {
+  collectionName: 'filters';
+  info: {
+    singularName: 'filter';
+    pluralName: 'filters';
+    displayName: 'filter';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    titleOne: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titleTwo: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    searchPlaceholder: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    types: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        ['Type', 'Villa', 'Apartment']
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    bedRooms: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Bedrooms',
+          '1 Bedroom',
+          '2 Bedroom',
+          '3 Bedroom ',
+          '4 Bedroom',
+          '5 Bedroom'
+        ]
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    SearchBTN: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    typesAR: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          '\u064A\u0643\u062A\u0628',
+          '\u0641\u064A\u0644\u0627',
+          '\u0634\u0642\u0629',
+          ''
+        ]
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    bedRoomsAR: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          '\u063A\u0631\u0641\u0629 \u0646\u0648\u0645',
+          '1 \u063A\u0631\u0641\u0629 \u0646\u0648\u0645',
+          '2 \u063A\u0631\u0641\u0629 \u0646\u0648\u0645',
+          '3 \u063A\u0631\u0641\u0629 \u0646\u0648\u0645',
+          '4 \u063A\u0631\u0641\u0629 \u0646\u0648\u0645',
+          '5 \u063A\u0631\u0641\u0629 \u0646\u0648\u0645',
+          ''
+        ]
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    typesCommercial: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        ['Type', 'Office', 'Retail']
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    typesCommercialAR: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          '\u064A\u0643\u062A\u0628',
+          '\u0645\u0643\u062A\u0628',
+          '\u0628\u064A\u0639 \u0628\u0627\u0644\u062A\u062C\u0632\u0626\u0629',
+          ''
+        ]
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::filter.filter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::filter.filter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::filter.filter',
+      'oneToMany',
+      'api::filter.filter'
     >;
     locale: Attribute.String;
   };
@@ -1700,6 +1877,7 @@ export interface ApiInformationSecurityInformationSecurity
     singularName: 'information-security';
     pluralName: 'information-securities';
     displayName: 'Information Security';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1711,6 +1889,12 @@ export interface ApiInformationSecurityInformationSecurity
   };
   attributes: {
     content: Attribute.RichText &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1735,6 +1919,59 @@ export interface ApiInformationSecurityInformationSecurity
       'api::information-security.information-security',
       'oneToMany',
       'api::information-security.information-security'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiMediaNavMediaNav extends Schema.CollectionType {
+  collectionName: 'media_navs';
+  info: {
+    singularName: 'media-nav';
+    pluralName: 'media-navs';
+    displayName: 'mediaNav';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    path: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::media-nav.media-nav',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::media-nav.media-nav',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::media-nav.media-nav',
+      'oneToMany',
+      'api::media-nav.media-nav'
     >;
     locale: Attribute.String;
   };
@@ -1770,6 +2007,12 @@ export interface ApiNavbarNavbar extends Schema.CollectionType {
         };
       }>;
     navList: Attribute.Component<'navbar-section.navbar-list', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    searchPlaceholder: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1950,6 +2193,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.CollectionType {
     singularName: 'privacy-policy';
     pluralName: 'privacy-policies';
     displayName: 'Privacy Policy';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1961,6 +2205,12 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.CollectionType {
   };
   attributes: {
     content: Attribute.RichText &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1985,6 +2235,83 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.CollectionType {
       'api::privacy-policy.privacy-policy',
       'oneToMany',
       'api::privacy-policy.privacy-policy'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiPropertiePropertie extends Schema.CollectionType {
+  collectionName: 'properties';
+  info: {
+    singularName: 'propertie';
+    pluralName: 'properties';
+    displayName: 'propertie';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    mainTitle: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titleOne: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titleTwo: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    shortDes: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titleOneTitle: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titleTwoTitle: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::propertie.propertie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::propertie.propertie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::propertie.propertie',
+      'oneToMany',
+      'api::propertie.propertie'
     >;
     locale: Attribute.String;
   };
@@ -2200,6 +2527,7 @@ export interface ApiRentalTermRentalTerm extends Schema.CollectionType {
     singularName: 'rental-term';
     pluralName: 'rental-terms';
     displayName: 'rental-term';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -2211,6 +2539,12 @@ export interface ApiRentalTermRentalTerm extends Schema.CollectionType {
   };
   attributes: {
     Desc: Attribute.RichText &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2273,7 +2607,15 @@ export interface ApiResidentialProjectResidentialProject
         };
       }>;
     proImgs: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    proPlans: Attribute.Component<'project-details-section.plan-section', true>;
+    proPlans: Attribute.Component<
+      'project-details-section.plan-section',
+      true
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locationTitle: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -2318,7 +2660,6 @@ export interface ApiResidentialProjectResidentialProject
       }>;
     slug: Attribute.UID & Attribute.Required;
     proFeature: Attribute.JSON &
-      Attribute.Required &
       Attribute.CustomField<
         'plugin::multi-select.multi-select',
         [
@@ -2341,11 +2682,23 @@ export interface ApiResidentialProjectResidentialProject
           'Sauna Room',
           'Swimming Pool',
           'Close Public Transport',
-          'Kitchen Facility Free DEWA for Offices'
+          'Kitchen Facility Free DEWA for Offices',
+          'Modern And Recently Refurbished Villas',
+          'Luxurious Finishes',
+          'Great Location',
+          'Beautiful Landscape And Garden',
+          '24 x 7 Security & Maintenance Service',
+          'In House Gym With Equipment',
+          'Furnished Kitchen And Outdoor',
+          'Private Swimming Pool'
         ]
-      >;
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locationFeature: Attribute.JSON &
-      Attribute.Required &
       Attribute.CustomField<
         'plugin::multi-select.multi-select',
         [
@@ -2385,11 +2738,18 @@ export interface ApiResidentialProjectResidentialProject
           'Bastakiya Art Area',
           'Restaurants and Cafes'
         ]
-      >;
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locationURL: Attribute.Text &
       Attribute.Required &
       Attribute.DefaultTo<"Search Your project's location on google map and click on share / Embed a map COPY HTML and remove this all and past here.">;
-    proType: Attribute.Enumeration<['Villa', 'Apartment']> &
+    proType: Attribute.Enumeration<
+      ['Villa', '\u0641\u064A\u0644\u0627', 'Apartment', '\u0634\u0642\u0629']
+    > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2403,6 +2763,93 @@ export interface ApiResidentialProjectResidentialProject
       }>;
     isRent: Attribute.Enumeration<['true', 'false']> &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    proFeatureAR: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          '\u0645\u0633\u0627\u062D\u0629 \u0648\u0627\u0633\u0639\u0629 \u0644\u0648\u0642\u0648\u0641 \u0627\u0644\u0633\u064A\u0627\u0631\u0627\u062A',
+          '\u062E\u062F\u0645\u0629 \u0627\u0644\u0623\u0645\u0646 \u0648\u0627\u0644\u0635\u064A\u0627\u0646\u0629 24 \u00D7 7',
+          '\u062A\u0646\u0633 \u0627\u0644\u0631\u064A\u0634\u0629',
+          '\u0645\u0646\u0637\u0642\u0629 \u0627\u0644\u0634\u0648\u0627\u0621',
+          '\u0645\u0646\u0637\u0642\u0629 \u0644\u0639\u0628 \u0627\u0644\u0623\u0637\u0641\u0627\u0644',
+          '\u0645\u0642\u0647\u0649',
+          '\u0645\u062D\u0637\u0629 \u0634\u062D\u0646 EV',
+          '\u0645\u0628\u0631\u062F \u0645\u062C\u0627\u0646\u064A',
+          '\u063A\u0627\u0632 \u0627\u0644\u0637\u0628\u062E \u0645\u062C\u0627\u0646\u064A',
+          '\u062F\u064A\u0648\u0627 \u0645\u062C\u0627\u0646\u0627 \u0644\u0644\u0645\u0643\u062A\u0628',
+          '\u0645\u0637\u0628\u062E \u0645\u062C\u0647\u0632 \u0628\u0627\u0644\u0643\u0627\u0645\u0644',
+          '\u0635\u0627\u0644\u0629 \u0623\u0644\u0639\u0627\u0628 \u0631\u064A\u0627\u0636\u064A\u0629 \u0645\u062C\u0647\u0632\u0629 \u0628\u0627\u0644\u0643\u0627\u0645\u0644',
+          '\u062C\u0627\u0643\u0648\u0632\u064A',
+          '\u0627\u0644\u0631\u0643\u0636 \u0627\u0644\u0645\u0633\u0627\u0631',
+          '\u0645\u0643\u062A\u0628\u0629',
+          '\u062A\u062D\u0645\u064A\u0644 \u0648\u062A\u0641\u0631\u064A\u063A \u0627\u0644\u0645\u0633\u062A\u0648\u062F\u0639\u0627\u062A',
+          '\u063A\u0631\u0641\u0629 \u0633\u0627\u0648\u0646\u0627',
+          '\u062D\u0645\u0627\u0645 \u0627\u0644\u0633\u0628\u0627\u062D\u0629',
+          '\u0625\u063A\u0644\u0627\u0642 \u0648\u0633\u0627\u0626\u0644 \u0627\u0644\u0646\u0642\u0644 \u0627\u0644\u0639\u0627\u0645',
+          '\u0645\u0631\u0627\u0641\u0642 \u0627\u0644\u0645\u0637\u0628\u062E \u0647\u064A\u0626\u0629 \u0643\u0647\u0631\u0628\u0627\u0621 \u0648\u0645\u064A\u0627\u0647 \u062F\u0628\u064A \u0645\u062C\u0627\u0646\u064A\u0629 \u0644\u0644\u0646\u0642\u0644 \u0644\u0644\u0645\u0643\u0627\u062A\u0628',
+          '\u0641\u064A\u0644\u0627\u062A \u062D\u062F\u064A\u062B\u0629 \u0648\u0645\u062C\u062F\u062F\u0629 \u0645\u0624\u062E\u0631\u064B\u0627',
+          '\u062A\u0634\u0637\u064A\u0628\u0627\u062A \u0641\u0627\u062E\u0631\u0629',
+          '\u0645\u0648\u0642\u0639 \u0639\u0638\u064A\u0645',
+          '\u0627\u0644\u0645\u0646\u0627\u0638\u0631 \u0627\u0644\u0637\u0628\u064A\u0639\u064A\u0629 \u0627\u0644\u062C\u0645\u064A\u0644\u0629 \u0648\u0627\u0644\u062D\u062F\u064A\u0642\u0629',
+          '\u062E\u062F\u0645\u0629 \u0627\u0644\u0623\u0645\u0646 \u0648\u0627\u0644\u0635\u064A\u0627\u0646\u0629 24 \u00D7 7',
+          '\u0635\u0627\u0644\u0629 \u0623\u0644\u0639\u0627\u0628 \u0631\u064A\u0627\u0636\u064A\u0629 \u062F\u0627\u062E\u0644\u064A\u0629 \u0645\u0639 \u0627\u0644\u0645\u0639\u062F\u0627\u062A',
+          '\u0645\u0637\u0628\u062E \u0645\u0641\u0631\u0648\u0634 \u0648\u062E\u0627\u0631\u062C\u064A',
+          '\u062D\u0645\u0627\u0645 \u0633\u0628\u0627\u062D\u0629 \u062E\u0627\u0635',
+          '',
+          ''
+        ]
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locationFeatureAR: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          '\u0625\u0637\u0627\u0631 \u062F\u0628\u064A',
+          '\u062D\u062F\u064A\u0642\u0629 \u0632\u0639\u0628\u064A\u0644',
+          '\u062E\u0648\u0631 \u062F\u0628\u064A',
+          '\u0648\u0627\u064A \u0641\u0627\u064A \u0645\u0648\u0644',
+          '\u062F\u0628\u064A \u062C\u0627\u0631\u062F\u0646 \u062C\u0644\u0648',
+          '\u0645\u0631\u0643\u0632 \u062F\u0628\u064A \u0627\u0644\u062A\u062C\u0627\u0631\u064A \u0627\u0644\u0639\u0627\u0644\u0645\u064A (DWTC)',
+          '\u0627\u0644\u0633\u064A\u0641',
+          '\u0628\u0631\u062C \u0627\u0644\u0639\u0631\u0628',
+          '\u0634\u0627\u0637\u0626 \u062C\u0645\u064A\u0631\u0627',
+          '\u0646\u062E\u0644\u0629 \u062C\u0645\u064A\u0631\u0627',
+          '\u0645\u062F\u064A\u0646\u0629 \u062C\u0645\u064A\u0631\u0627',
+          '\u062D\u062F\u064A\u0642\u0629 \u0648\u0627\u064A\u0644\u062F \u0648\u0627\u062F\u064A \u0627\u0644\u0645\u0627\u0626\u064A\u0629',
+          '\u0645\u0633\u062C\u062F \u062C\u0645\u064A\u0631\u0627',
+          '\u0645\u0631\u0643\u0632 \u062A\u0633\u0648\u0642 \u0645\u064A\u0631\u0643\u0627\u062A\u0648',
+          '\u0633\u064A\u062A\u064A \u0648\u0648\u0643',
+          '\u0628\u0648\u0643\u0633 \u0628\u0627\u0631\u0643',
+          '\u0642\u0646\u0627\u0629 \u062F\u0628\u064A',
+          '\u0633\u0648\u0642 \u062F\u064A\u0631\u0629 \u0644\u0644\u0630\u0647\u0628',
+          '\u0633\u0648\u0642 \u0627\u0644\u062A\u0648\u0627\u0628\u0644',
+          '\u0633\u0648\u0642 \u0646\u0627\u064A\u0641',
+          '\u0639\u0628\u0631\u0629',
+          '\u0627\u0644\u0641\u0647\u064A\u062F\u064A \u0627\u0644\u062A\u0627\u0631\u064A\u062E\u064A\u0629',
+          '\u0627\u0644\u0645\u0646\u0637\u0642\u0629 (\u0627\u0644\u0628\u0633\u062A\u0643\u064A\u0629)',
+          '\u062F\u0628\u064A \u0633\u0641\u0627\u0631\u064A',
+          '\u0628\u062D\u064A\u0631\u0627\u062A \u062F\u0628\u064A',
+          '\u0633\u0648\u0642 \u0627\u0644\u062A\u0646\u064A\u0646',
+          '\u0633\u0648\u0642 \u0627\u0644\u0633\u064A\u0627\u0631\u0627\u062A',
+          '\u0645\u062D\u0645\u064A\u0629 \u0631\u0623\u0633 \u0627\u0644\u062E\u0648\u0631 \u0644\u0644\u062D\u064A\u0627\u0629 \u0627\u0644\u0628\u0631\u064A\u0629',
+          '\u0645\u064A\u062F\u0627\u0646\u0627\u0644\u0645\u0648\u0627\u0642\u0639 \u0627\u0644\u062B\u0642\u0627\u0641\u064A\u0629',
+          '\u062F\u0628\u064A \u062C\u0627\u0631\u062F\u0646 \u062C\u0644\u0648',
+          '\u062D\u062F\u064A\u0642\u0629 \u062E\u0648\u0631 \u062F\u0628\u064A',
+          '\u062F\u0628\u064A \u0623\u0648\u0628\u0631\u0627',
+          '\u0645\u0646\u0637\u0642\u0629 \u0627\u0644\u0628\u0633\u062A\u0643\u064A\u0629 \u0644\u0644\u0641\u0646\u0648\u0646',
+          '\u0645\u0637\u0627\u0639\u0645 \u0648\u0645\u0642\u0627\u0647\u064A',
+          ''
+        ]
+      > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2439,6 +2886,7 @@ export interface ApiTermsAndConditionTermsAndCondition
     singularName: 'terms-and-condition';
     pluralName: 'terms-and-conditions';
     displayName: 'Terms & Condition';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -2450,6 +2898,12 @@ export interface ApiTermsAndConditionTermsAndCondition
   };
   attributes: {
     content: Attribute.RichText &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2608,6 +3062,12 @@ export interface ApiWhistleblowingWhistleblowing extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2658,15 +3118,18 @@ declare module '@strapi/types' {
       'api::contact-us-form.contact-us-form': ApiContactUsFormContactUsForm;
       'api::contect-us.contect-us': ApiContectUsContectUs;
       'api::faq.faq': ApiFaqFaq;
+      'api::filter.filter': ApiFilterFilter;
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::information-security.information-security': ApiInformationSecurityInformationSecurity;
+      'api::media-nav.media-nav': ApiMediaNavMediaNav;
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::news-and-press.news-and-press': ApiNewsAndPressNewsAndPress;
       'api::photo-gallery.photo-gallery': ApiPhotoGalleryPhotoGallery;
       'api::post.post': ApiPostPost;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
+      'api::propertie.propertie': ApiPropertiePropertie;
       'api::register-form.register-form': ApiRegisterFormRegisterForm;
       'api::register-label.register-label': ApiRegisterLabelRegisterLabel;
       'api::rental-term.rental-term': ApiRentalTermRentalTerm;

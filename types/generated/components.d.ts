@@ -398,6 +398,7 @@ export interface UpcomingSectionAllUpcoming extends Schema.Component {
     img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     sliderImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     proName: Attribute.String;
+    viewBTN: Attribute.String;
   };
 }
 
@@ -405,9 +406,11 @@ export interface UpcomingSectionHero extends Schema.Component {
   collectionName: 'components_upcoming_section_heroes';
   info: {
     displayName: 'hero';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
+    countName: Attribute.String;
   };
 }
 
@@ -421,6 +424,7 @@ export interface VideoGallerySectionHeroSection extends Schema.Component {
     title: Attribute.String;
     Desc: Attribute.Text;
     channelLink: Attribute.Text & Attribute.Required;
+    SubsBTN: Attribute.String;
   };
 }
 

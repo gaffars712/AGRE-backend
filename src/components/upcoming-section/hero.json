@@ -1,11 +1,15 @@
 {
   "collectionName": "components_upcoming_section_heroes",
   "info": {
-    "displayName": "hero"
+    "displayName": "hero",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
+      "type": "string"
+    },
+    "countName": {
       "type": "string"
     }
   }

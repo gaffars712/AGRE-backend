@@ -234,8 +234,11 @@
       "type": "enumeration",
       "enum": [
         "Retail",
+        "بيع بالتجزئة",
         "Office",
-        "Retail - F&B"
+        "مكتب",
+        "Retail - F&B",
+        "البيع بالتجزئة - المأكولات والمشروبات"
       ],
       "required": true,
       "pluginOptions": {

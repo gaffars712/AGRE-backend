@@ -15,6 +15,9 @@
     "channelLink": {
       "type": "text",
       "required": true
+    },
+    "SubsBTN": {
+      "type": "string"
     }
   }
 }

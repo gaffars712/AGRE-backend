@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "privacy_policies",
+  "collectionName": "media_navs",
   "info": {
-    "singularName": "privacy-policy",
-    "pluralName": "privacy-policies",
-    "displayName": "Privacy Policy",
+    "singularName": "media-nav",
+    "pluralName": "media-navs",
+    "displayName": "mediaNav",
     "description": ""
   },
   "options": {
@@ -16,15 +16,15 @@
     }
   },
   "attributes": {
-    "content": {
-      "type": "richtext",
+    "name": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "string"
     },
-    "title": {
+    "path": {
       "pluginOptions": {
         "i18n": {
           "localized": true
