@@ -192,7 +192,7 @@ export interface HomeSectionsHeroSection extends Schema.Component {
   };
   attributes: {
     heroContent: Attribute.Text;
-    heroImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    heroImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
   };
 }
 

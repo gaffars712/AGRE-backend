@@ -1345,6 +1345,19 @@ export interface ApiCommercialProjectCommercialProject
           localized: true;
         };
       }>;
+    idSlug: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    communitie: Attribute.Enumeration<['true', 'false']> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'false'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2855,6 +2868,19 @@ export interface ApiResidentialProjectResidentialProject
           localized: true;
         };
       }>;
+    idSlug: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    communitie: Attribute.Enumeration<['true', 'false']> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'false'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
