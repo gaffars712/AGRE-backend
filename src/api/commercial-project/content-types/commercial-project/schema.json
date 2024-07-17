@@ -375,6 +375,15 @@
       ],
       "default": "false",
       "required": false
+    },
+    "proShortName": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true
     }
   }
 }

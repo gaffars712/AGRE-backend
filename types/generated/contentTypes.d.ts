@@ -1358,6 +1358,13 @@ export interface ApiCommercialProjectCommercialProject
         };
       }> &
       Attribute.DefaultTo<'false'>;
+    proShortName: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2881,6 +2888,13 @@ export interface ApiResidentialProjectResidentialProject
         };
       }> &
       Attribute.DefaultTo<'false'>;
+    proShortName: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
