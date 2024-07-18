@@ -32,8 +32,7 @@
       "options": [
         "Apartment",
         "Villa",
-        "Office ",
-        "Space ",
+        "Office Space ",
         "etc"
       ],
       "customField": "plugin::multi-select.multi-select"
@@ -43,8 +42,7 @@
       "options": [
         "شقة",
         "فيلا",
-        "مكتب ",
-        "فضاء ",
+        "مساحة المكتب ",
         "إلخ",
         ""
       ],
