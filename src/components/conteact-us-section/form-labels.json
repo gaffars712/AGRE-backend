@@ -26,6 +26,29 @@
     },
     "formTerms": {
       "type": "text"
+    },
+    "inerestedOptionsEN": {
+      "type": "customField",
+      "options": [
+        "Apartment",
+        "Villa",
+        "Office ",
+        "Space ",
+        "etc"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "inerestedOptionsAR": {
+      "type": "customField",
+      "options": [
+        "شقة",
+        "فيلا",
+        "مكتب ",
+        "فضاء ",
+        "إلخ",
+        ""
+      ],
+      "customField": "plugin::multi-select.multi-select"
     }
   }
 }

@@ -101,6 +101,23 @@ export interface ConteactUsSectionFormLabels extends Schema.Component {
     interestLabel: Attribute.String;
     formBTN: Attribute.String;
     formTerms: Attribute.Text;
+    inerestedOptionsEN: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        ['Apartment', 'Villa', 'Office ', 'Space ', 'etc']
+      >;
+    inerestedOptionsAR: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          '\u0634\u0642\u0629',
+          '\u0641\u064A\u0644\u0627',
+          '\u0645\u0643\u062A\u0628 ',
+          '\u0641\u0636\u0627\u0621 ',
+          '\u0625\u0644\u062E',
+          ''
+        ]
+      >;
   };
 }
 
