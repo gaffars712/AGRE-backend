@@ -251,14 +251,29 @@ export interface HomeSectionsUpcomingSection extends Schema.Component {
   };
 }
 
+export interface NavbarSectionDropdownItem extends Schema.Component {
+  collectionName: 'components_navbar_section_dropdown_items';
+  info: {
+    displayName: 'dropdownItem';
+  };
+  attributes: {
+    name: Attribute.String;
+    path: Attribute.String;
+  };
+}
+
 export interface NavbarSectionNavbarList extends Schema.Component {
   collectionName: 'components_navbar_section_navbar_lists';
   info: {
     displayName: 'navbarList';
+    description: '';
   };
   attributes: {
     listName: Attribute.String;
     listPath: Attribute.String;
+    isDropdown: Attribute.Enumeration<['true', 'false']> &
+      Attribute.DefaultTo<'false'>;
+    dropdownItem: Attribute.Component<'navbar-section.dropdown-item', true>;
   };
 }
 
@@ -476,6 +491,7 @@ declare module '@strapi/types' {
       'home-sections.image-slider': HomeSectionsImageSlider;
       'home-sections.residential-section': HomeSectionsResidentialSection;
       'home-sections.upcoming-section': HomeSectionsUpcomingSection;
+      'navbar-section.dropdown-item': NavbarSectionDropdownItem;
       'navbar-section.navbar-list': NavbarSectionNavbarList;
       'news-and-press-section.hero-section': NewsAndPressSectionHeroSection;
       'news-and-press-section.news-content': NewsAndPressSectionNewsContent;
