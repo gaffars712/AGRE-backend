@@ -1238,7 +1238,11 @@ export interface ApiCommercialProjectCommercialProject
         'Office',
         '\u0645\u0643\u062A\u0628',
         'Retail - F&B',
-        '\u0627\u0644\u0628\u064A\u0639 \u0628\u0627\u0644\u062A\u062C\u0632\u0626\u0629 - \u0627\u0644\u0645\u0623\u0643\u0648\u0644\u0627\u062A \u0648\u0627\u0644\u0645\u0634\u0631\u0648\u0628\u0627\u062A'
+        '\u0627\u0644\u0628\u064A\u0639 \u0628\u0627\u0644\u062A\u062C\u0632\u0626\u0629 - \u0627\u0644\u0645\u0623\u0643\u0648\u0644\u0627\u062A \u0648\u0627\u0644\u0645\u0634\u0631\u0648\u0628\u0627\u062A',
+        'Villa',
+        '\u0641\u064A\u0644\u0627',
+        'Apartment',
+        '\u0634\u0642\u0629'
       ]
     > &
       Attribute.Required &
@@ -1869,6 +1873,12 @@ export interface ApiHomeHome extends Schema.CollectionType {
         'home-sections.upcoming-section'
       ]
     > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slider: Attribute.Component<'home-sections.hero-section', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

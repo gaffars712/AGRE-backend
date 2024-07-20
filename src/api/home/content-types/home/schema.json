@@ -33,6 +33,16 @@
           "localized": true
         }
       }
+    },
+    "slider": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home-sections.hero-section"
     }
   }
 }
