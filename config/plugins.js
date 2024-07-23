@@ -10,13 +10,13 @@ module.exports = ({ env }) => ({
     config: {
       provider: 'aws-s3',
       providerOptions: {
-        accessKeyId: 'AKIA2PORGW6MI2AXP65P',
-        secretAccessKey: '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',
-        region: 'us-east-1',
+        accessKeyId: env('AWS_ACCESS_KEY_ID'),
+        secretAccessKey: env('AWS_SECRET_ACCESS_KEY'),
+        region: env('AWS_REGION'),
         params: {
           ACL: 'public-read',
           signedUrlExpires: 15 * 60,
-          Bucket: 'sdlc-scrapi',
+          Bucket: env('agre-pro'),
         },
       },
       actionOptions: {
