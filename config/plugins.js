@@ -1,4 +1,5 @@
 require('dotenv').config();
+const awsConfig = require('./awsConfig.js');
 
 module.exports = ({ env }) => ({
   'strapi-plugin-populate-deep': {
@@ -10,13 +11,13 @@ module.exports = ({ env }) => ({
     config: {
       provider: 'aws-s3',
       providerOptions: {
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-        region: process.env.AWS_REGION,
+        accessKeyId: awsConfig.accessKeyId,
+        secretAccessKey: awsConfig.secretAccessKey,
+        region: awsConfig.region,
         params: {
           ACL: 'public-read',
           signedUrlExpires: 15 * 60,
-          Bucket: process.env.AWS_BUCKET,
+          Bucket: awsConfig.bucket,
         },
       },
       actionOptions: {
