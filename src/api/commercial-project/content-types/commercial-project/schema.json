@@ -170,7 +170,8 @@
         "Close Public Transport",
         "Kitchen Facility Free DEWA for Offices",
         "Kitchen Facility",
-        "Free DEWA for  Offices"
+        "Free DEWA for  Offices",
+        "Fully fitted kitchen with white goods"
       ],
       "required": false,
       "pluginOptions": {
@@ -311,7 +312,8 @@
         "إغلاق وسائل النقل العام",
         "مرافق المطبخ هيئة كهرباء ومياه دبي مجانية للمكاتب",
         "مرافق المطبخ",
-        "هيئة كهرباء ومياه دبي مجانية للمكاتب"
+        "هيئة كهرباء ومياه دبي مجانية للمكاتب",
+        "مطبخ مجهز بالكامل مع السلع البيضاء"
       ],
       "customField": "plugin::multi-select.multi-select"
     },

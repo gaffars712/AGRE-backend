@@ -165,7 +165,8 @@
         "24 x 7 Security & Maintenance Service",
         "In House Gym With Equipment",
         "Furnished Kitchen And Outdoor",
-        "Private Swimming Pool"
+        "Private Swimming Pool",
+        "Fully fitted kitchen with white goods"
       ],
       "customField": "plugin::multi-select.multi-select",
       "required": false,
@@ -299,6 +300,7 @@
         "صالة ألعاب رياضية داخلية مع المعدات",
         "مطبخ مفروش وخارجي",
         "حمام سباحة خاص",
+        "مطبخ مجهز بالكامل مع السلع البيضاء",
         "",
         ""
       ]

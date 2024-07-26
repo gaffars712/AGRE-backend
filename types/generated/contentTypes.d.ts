@@ -1175,7 +1175,8 @@ export interface ApiCommercialProjectCommercialProject
           'Close Public Transport',
           'Kitchen Facility Free DEWA for Offices',
           'Kitchen Facility',
-          'Free DEWA for  Offices'
+          'Free DEWA for  Offices',
+          'Fully fitted kitchen with white goods'
         ]
       > &
       Attribute.SetPluginOptions<{
@@ -1298,7 +1299,8 @@ export interface ApiCommercialProjectCommercialProject
           '\u0625\u063A\u0644\u0627\u0642 \u0648\u0633\u0627\u0626\u0644 \u0627\u0644\u0646\u0642\u0644 \u0627\u0644\u0639\u0627\u0645',
           '\u0645\u0631\u0627\u0641\u0642 \u0627\u0644\u0645\u0637\u0628\u062E \u0647\u064A\u0626\u0629 \u0643\u0647\u0631\u0628\u0627\u0621 \u0648\u0645\u064A\u0627\u0647 \u062F\u0628\u064A \u0645\u062C\u0627\u0646\u064A\u0629 \u0644\u0644\u0645\u0643\u0627\u062A\u0628',
           '\u0645\u0631\u0627\u0641\u0642 \u0627\u0644\u0645\u0637\u0628\u062E',
-          '\u0647\u064A\u0626\u0629 \u0643\u0647\u0631\u0628\u0627\u0621 \u0648\u0645\u064A\u0627\u0647 \u062F\u0628\u064A \u0645\u062C\u0627\u0646\u064A\u0629 \u0644\u0644\u0645\u0643\u0627\u062A\u0628'
+          '\u0647\u064A\u0626\u0629 \u0643\u0647\u0631\u0628\u0627\u0621 \u0648\u0645\u064A\u0627\u0647 \u062F\u0628\u064A \u0645\u062C\u0627\u0646\u064A\u0629 \u0644\u0644\u0645\u0643\u0627\u062A\u0628',
+          '\u0645\u0637\u0628\u062E \u0645\u062C\u0647\u0632 \u0628\u0627\u0644\u0643\u0627\u0645\u0644 \u0645\u0639 \u0627\u0644\u0633\u0644\u0639 \u0627\u0644\u0628\u064A\u0636\u0627\u0621'
         ]
       > &
       Attribute.SetPluginOptions<{
@@ -2720,7 +2722,8 @@ export interface ApiResidentialProjectResidentialProject
           '24 x 7 Security & Maintenance Service',
           'In House Gym With Equipment',
           'Furnished Kitchen And Outdoor',
-          'Private Swimming Pool'
+          'Private Swimming Pool',
+          'Fully fitted kitchen with white goods'
         ]
       > &
       Attribute.SetPluginOptions<{
@@ -2830,6 +2833,7 @@ export interface ApiResidentialProjectResidentialProject
           '\u0635\u0627\u0644\u0629 \u0623\u0644\u0639\u0627\u0628 \u0631\u064A\u0627\u0636\u064A\u0629 \u062F\u0627\u062E\u0644\u064A\u0629 \u0645\u0639 \u0627\u0644\u0645\u0639\u062F\u0627\u062A',
           '\u0645\u0637\u0628\u062E \u0645\u0641\u0631\u0648\u0634 \u0648\u062E\u0627\u0631\u062C\u064A',
           '\u062D\u0645\u0627\u0645 \u0633\u0628\u0627\u062D\u0629 \u062E\u0627\u0635',
+          '\u0645\u0637\u0628\u062E \u0645\u062C\u0647\u0632 \u0628\u0627\u0644\u0643\u0627\u0645\u0644 \u0645\u0639 \u0627\u0644\u0633\u0644\u0639 \u0627\u0644\u0628\u064A\u0636\u0627\u0621',
           '',
           ''
         ]
