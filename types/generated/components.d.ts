@@ -251,6 +251,19 @@ export interface HomeSectionsUpcomingSection extends Schema.Component {
   };
 }
 
+export interface LandSectionLand extends Schema.Component {
+  collectionName: 'components_land_section_lands';
+  info: {
+    displayName: 'Land';
+    description: '';
+  };
+  attributes: {
+    content: Attribute.RichText;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
+  };
+}
+
 export interface NavbarSectionDropdownItem extends Schema.Component {
   collectionName: 'components_navbar_section_dropdown_items';
   info: {
@@ -491,6 +504,7 @@ declare module '@strapi/types' {
       'home-sections.image-slider': HomeSectionsImageSlider;
       'home-sections.residential-section': HomeSectionsResidentialSection;
       'home-sections.upcoming-section': HomeSectionsUpcomingSection;
+      'land-section.land': LandSectionLand;
       'navbar-section.dropdown-item': NavbarSectionDropdownItem;
       'navbar-section.navbar-list': NavbarSectionNavbarList;
       'news-and-press-section.hero-section': NewsAndPressSectionHeroSection;

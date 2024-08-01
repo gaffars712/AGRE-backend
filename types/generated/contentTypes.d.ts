@@ -1176,7 +1176,7 @@ export interface ApiCommercialProjectCommercialProject
           'Kitchen Facility Free DEWA for Offices',
           'Kitchen Facility',
           'Free DEWA for  Offices',
-          'Fully fitted kitchen with white goods'
+          'Fully Fitted Kitchen With White Goods'
         ]
       > &
       Attribute.SetPluginOptions<{
@@ -1956,6 +1956,44 @@ export interface ApiInformationSecurityInformationSecurity
   };
 }
 
+export interface ApiLandLand extends Schema.CollectionType {
+  collectionName: 'lands';
+  info: {
+    singularName: 'land';
+    pluralName: 'lands';
+    displayName: 'Land';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    Land: Attribute.Component<'land-section.land', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::land.land', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::land.land', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::land.land',
+      'oneToMany',
+      'api::land.land'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiMediaNavMediaNav extends Schema.CollectionType {
   collectionName: 'media_navs';
   info: {
@@ -2723,7 +2761,7 @@ export interface ApiResidentialProjectResidentialProject
           'In House Gym With Equipment',
           'Furnished Kitchen And Outdoor',
           'Private Swimming Pool',
-          'Fully fitted kitchen with white goods'
+          'Fully Fitted Kitchen With White Goods'
         ]
       > &
       Attribute.SetPluginOptions<{
@@ -3177,6 +3215,7 @@ declare module '@strapi/types' {
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::information-security.information-security': ApiInformationSecurityInformationSecurity;
+      'api::land.land': ApiLandLand;
       'api::media-nav.media-nav': ApiMediaNavMediaNav;
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::news-and-press.news-and-press': ApiNewsAndPressNewsAndPress;
