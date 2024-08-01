@@ -1932,6 +1932,12 @@ export interface ApiInformationSecurityInformationSecurity
           localized: true;
         };
       }>;
+    banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2286,6 +2292,12 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2615,6 +2627,12 @@ export interface ApiRentalTermRentalTerm extends Schema.CollectionType {
         };
       }>;
     title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -3001,6 +3019,12 @@ export interface ApiTermsAndConditionTermsAndCondition
           localized: true;
         };
       }>;
+    banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -3155,6 +3179,12 @@ export interface ApiWhistleblowingWhistleblowing extends Schema.CollectionType {
         };
       }>;
     title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
