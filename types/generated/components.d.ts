@@ -423,10 +423,12 @@ export interface SharedSeo extends Schema.Component {
   collectionName: 'components_shared_seos';
   info: {
     displayName: 'seo';
+    description: '';
   };
   attributes: {
     metaTitle: Attribute.String;
     metaDesc: Attribute.Text;
+    favicon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 

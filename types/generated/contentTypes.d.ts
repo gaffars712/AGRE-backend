@@ -1809,6 +1809,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     singularName: 'global';
     pluralName: 'globals';
     displayName: 'global';
+    description: '';
   };
   options: {
     draftAndPublish: true;
