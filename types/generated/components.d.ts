@@ -104,7 +104,17 @@ export interface ConteactUsSectionFormLabels extends Schema.Component {
     inerestedOptionsEN: Attribute.JSON &
       Attribute.CustomField<
         'plugin::multi-select.multi-select',
-        ['Apartment', 'Villa', 'Office Space ', 'etc']
+        [
+          'Apartment',
+          'Villa',
+          'Shop',
+          'Office',
+          'Stall',
+          'Foodcourt',
+          'Showroom',
+          'Warehouse',
+          'Land'
+        ]
       >;
     inerestedOptionsAR: Attribute.JSON &
       Attribute.CustomField<
@@ -112,8 +122,13 @@ export interface ConteactUsSectionFormLabels extends Schema.Component {
         [
           '\u0634\u0642\u0629',
           '\u0641\u064A\u0644\u0627',
-          '\u0645\u0633\u0627\u062D\u0629 \u0627\u0644\u0645\u0643\u062A\u0628 ',
-          '\u0625\u0644\u062E',
+          '\u0645\u062D\u0644',
+          '\u0645\u0643\u062A\u0628',
+          '\u0643\u0634\u0643',
+          '\u0642\u0627\u0639\u0629 \u0627\u0644\u0637\u0639\u0627\u0645',
+          '\u0635\u0627\u0644\u0629 \u0627\u0644\u0639\u0631\u0636',
+          '\u0645\u0633\u062A\u0648\u062F\u0639',
+          '\u0623\u0631\u0636',
           ''
         ]
       >;

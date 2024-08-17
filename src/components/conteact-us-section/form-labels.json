@@ -32,8 +32,13 @@
       "options": [
         "Apartment",
         "Villa",
-        "Office Space ",
-        "etc"
+        "Shop",
+        "Office",
+        "Stall",
+        "Foodcourt",
+        "Showroom",
+        "Warehouse",
+        "Land"
       ],
       "customField": "plugin::multi-select.multi-select"
     },
@@ -42,8 +47,13 @@
       "options": [
         "شقة",
         "فيلا",
-        "مساحة المكتب ",
-        "إلخ",
+        "محل",
+        "مكتب",
+        "كشك",
+        "قاعة الطعام",
+        "صالة العرض",
+        "مستودع",
+        "أرض",
         ""
       ],
       "customField": "plugin::multi-select.multi-select"

@@ -1371,6 +1371,58 @@ export interface ApiCommercialProjectCommercialProject
           localized: false;
         };
       }>;
+    unitType: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Studio',
+          '1 Bedroom',
+          '2 Bedrooms',
+          '2 Bedrooms+Maid room',
+          '3 Bedrooms',
+          '4 Bedrooms',
+          '1 Bedroom Simplex',
+          '1 Bedroom Duplex',
+          '2 Bedroom Duplex',
+          'Office',
+          'Showroom',
+          'Shop',
+          'Stall',
+          'Foodcourt ',
+          'Warehouse'
+        ]
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    unitTypeAR: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          '\u0627\u0633\u062A\u0648\u062F\u064A\u0648',
+          '1 \u063A\u0631\u0641\u0629 \u0646\u0648\u0645',
+          '2 \u063A\u0631\u0641 \u0646\u0648\u0645',
+          '2 \u063A\u0631\u0641 \u0646\u0648\u0645 + \u063A\u0631\u0641\u0629 \u062E\u0627\u062F\u0645\u0629',
+          '3 \u063A\u0631\u0641 \u0646\u0648\u0645',
+          '4 \u063A\u0631\u0641 \u0646\u0648\u0645',
+          '\u063A\u0631\u0641\u0629 \u0646\u0648\u0645 \u0648\u0627\u062D\u062F\u0629 \u0633\u064A\u0645\u0628\u0644\u0643\u0633',
+          '\u063A\u0631\u0641\u0629 \u0646\u0648\u0645 \u0648\u0627\u062D\u062F\u0629 \u062F\u0648\u0628\u0644\u0643\u0633',
+          '\u062F\u0648\u0628\u0644\u0643\u0633 \u0628\u063A\u0631\u0641\u062A\u064A \u0646\u0648\u0645',
+          '\u0645\u0643\u062A\u0628',
+          '\u0635\u0627\u0644\u0629 \u0627\u0644\u0639\u0631\u0636',
+          '\u0645\u062D\u0644',
+          '\u0643\u0634\u0643',
+          '\u0642\u0627\u0639\u0629 \u0627\u0644\u0637\u0639\u0627\u0645',
+          '\u0645\u0633\u062A\u0648\u062F\u0639'
+        ]
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2964,6 +3016,58 @@ export interface ApiResidentialProjectResidentialProject
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
+        };
+      }>;
+    unitType: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Studio',
+          '1 Bedroom',
+          '2 Bedrooms',
+          '2 Bedrooms+Maid room',
+          '3 Bedrooms',
+          '4 Bedrooms',
+          '1 Bedroom Simplex',
+          '1 Bedroom Duplex',
+          '2 Bedroom Duplex',
+          'Office',
+          'Showroom',
+          'Shop',
+          'Stall',
+          'Foodcourt ',
+          'Warehouse'
+        ]
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    unitTypeAR: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          '\u0627\u0633\u062A\u0648\u062F\u064A\u0648',
+          '1 \u063A\u0631\u0641\u0629 \u0646\u0648\u0645',
+          '2 \u063A\u0631\u0641 \u0646\u0648\u0645',
+          '2 \u063A\u0631\u0641 \u0646\u0648\u0645 + \u063A\u0631\u0641\u0629 \u062E\u0627\u062F\u0645\u0629',
+          '3 \u063A\u0631\u0641 \u0646\u0648\u0645',
+          '4 \u063A\u0631\u0641 \u0646\u0648\u0645',
+          '\u063A\u0631\u0641\u0629 \u0646\u0648\u0645 \u0648\u0627\u062D\u062F\u0629 \u0633\u064A\u0645\u0628\u0644\u0643\u0633',
+          '\u063A\u0631\u0641\u0629 \u0646\u0648\u0645 \u0648\u0627\u062D\u062F\u0629 \u062F\u0648\u0628\u0644\u0643\u0633',
+          '\u062F\u0648\u0628\u0644\u0643\u0633 \u0628\u063A\u0631\u0641\u062A\u064A \u0646\u0648\u0645',
+          '\u0645\u0643\u062A\u0628',
+          '\u0635\u0627\u0644\u0629 \u0627\u0644\u0639\u0631\u0636',
+          '\u0645\u062D\u0644',
+          '\u0643\u0634\u0643',
+          '\u0642\u0627\u0639\u0629 \u0627\u0644\u0637\u0639\u0627\u0645',
+          '\u0645\u0633\u062A\u0648\u062F\u0639'
+        ]
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
         };
       }>;
     createdAt: Attribute.DateTime;

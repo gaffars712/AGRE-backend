@@ -390,6 +390,58 @@
       },
       "type": "string",
       "required": true
+    },
+    "unitType": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "options": [
+        "Studio",
+        "1 Bedroom",
+        "2 Bedrooms",
+        "2 Bedrooms+Maid room",
+        "3 Bedrooms",
+        "4 Bedrooms",
+        "1 Bedroom Simplex",
+        "1 Bedroom Duplex",
+        "2 Bedroom Duplex",
+        "Office",
+        "Showroom",
+        "Shop",
+        "Stall",
+        "Foodcourt ",
+        "Warehouse"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "unitTypeAR": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "options": [
+        "استوديو",
+        "1 غرفة نوم",
+        "2 غرف نوم",
+        "2 غرف نوم + غرفة خادمة",
+        "3 غرف نوم",
+        "4 غرف نوم",
+        "غرفة نوم واحدة سيمبلكس",
+        "غرفة نوم واحدة دوبلكس",
+        "دوبلكس بغرفتي نوم",
+        "مكتب",
+        "صالة العرض",
+        "محل",
+        "كشك",
+        "قاعة الطعام",
+        "مستودع"
+      ],
+      "customField": "plugin::multi-select.multi-select"
     }
   }
 }
